@@ -1,0 +1,82 @@
+body {
+	margin: 0;
+
+
+}
+html {
+  scroll-behavior: smooth;
+ }
+
+
+#AboutWrapper{
+	display: block;
+	margin: 0px;
+	background-image: url(Images/Index2.jpg); 
+	background-size: cover; 
+	background-repeat: no-repeat;  
+	background-position: fixed;
+	border-style: solid;
+	padding-bottom: 10%;
+	margin-bottom: 3%;
+}
+#AboutContent{
+	text-align: center;
+	background-color: white;
+	background-position: cover;
+	width: 80%;
+	margin-top: 10%;
+	margin-left: 10%;
+	font-size: 18px;
+	opacity: .9;
+	border: outset;
+}
+#AboutContent ul, #AboutContent li {
+	text-decoration: none;
+	list-style-type: none;
+	padding-left: 0;
+}
+#AboutContent a {
+	text-decoration: none;
+}
+#AboutContent button {
+	margin-top: 10px;
+	font-size: 16px;
+	border-style: outset;
+	border-width: medium;
+}
+
+#Home a:hover {
+	color: black;
+
+}
+
+
+#Hyperautomation, #Multiexperience, #DistributeCloud, #Services {
+	padding: 10px;
+	background-color: white;
+	margin: 10px;
+	border-style: solid;
+	background-image: url('Images/Consult-Back.jpg'); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: sticky;
+    font-size: 18px;
+    font-family: Bodoni MT, Didot, Didot LT STD, Hoefler Text, Garamond, Times New Roman, serif;
+   
+}
+#Services {
+	text-align: center;
+}
+
+#Services button {
+	padding: 7px;
+	margin: 6px;
+	margin-top: 10px;
+	background-color: white;
+	color: black;
+	border-width: medium;
+}
+#Services button:hover, #AboutContent button:hover {
+	border-color: yellow;
+	color: grey;
+}

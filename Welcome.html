@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+  </head>
+
+  <title>Home Page</title>
+
+  <!---Setting a background that will only be used for the body of my home page --->
+   <body  style="background-image: url('Images/UCC.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;">
+
+     <div class="Page-Container">
+
+      <!--My Nav Bar -->
+      <div class="topnav" id="myTopnav">
+
+        <!-- Link for the home page -->
+        <a href="Welcome.html" id="active">Home</a>
+        
+        <!--When you hover over the Curriculum Vitae, a drop down menu will appear -->
+       <div class="dropdown">
+          <button class="dropbtn">Curriculum Vitae</button>
+
+          <!-- The drop down content -->
+          <div class="dropdown-content">
+            <a href="CV-PersonalInfo.html">Personal Information</a>
+            <a href="CV-Education.html">Education</a>
+            <a href="CV-Work.html">Work Experience</a>
+          </div>
+        </div> 
+
+        <!--When you hover over the Interests, a drop down menu will appear -->
+          <div class="dropdown">
+            <button class="dropbtn">Interests</a></button>
+
+             <!-- The drop down content -->
+            <div class="dropdown-content">
+               <a href="Interest-JQ.html">Index</a>
+            </div>
+
+          </div> 
+
+        <div class="dropdown">
+          <button class="dropbtn">Consultancy</button>
+
+           <!-- The drop down content -->
+          <div class="dropdown-content">
+            <a href="IS1113Consult.html">IS1113 Consulting</a>
+          </div>
+        </div> 
+
+        <!-- Calling on javascript when the screen goes below a certain amount of pixels-->
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+
+      <!--My information regarding the IS1113 Project-->
+     <div class="Information">
+       <h3>Luke Field<br />
+       IS1113 Project<br />
+       Academic Year 2019/20<br />
+        Professor: Ivan Morrissey</h3><br />
+
+        <p>Welcome to my IS1103 project.<br />
+        Here you will find my CV, interest and a consultancy page, all developed as outline by our assignment brief.<br />
+        Above you will see a navigational bar that can take you to whichever page you wish.<br />
+        Below are two buttons, one will take you to my first CV page and the other will take you to the consultancy page.<br />
+        I hope you enjoy my website!<br /></p>
+        
+
+
+        <!--Buttons to go to either the start of my cv pages or the consultancy pages-->
+        <a href="CV-PersonalInfo.html"><button>CV- Personal Information</button></a>
+        <a href="IS1113Consult.html"><button>IS1113 Consultancy</button></a>
+
+        <br>
+
+        <h4>To get to the github page please click the link below</h4>
+        <a href="http://www.119749409.github.io/Welcome.html">119749409.github.io/Welcome.html</a>
+     </div>
+</div>
+
+  <!-- the Javascript for my navigation bar -->
+  <!-- It changes the ID name so a different css can affect the area depending on the size of the screen -->
+  <script>
+  function  myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+  </head>
+
+  <title>Education</title>
+ <body style="background-image: url('Images/CV-Back.png'); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: sticky;
+                background-attachment: fixed;">
+
+    <div class="Page-Container">
+
+      <!--My Nav Bar -->
+      <div class="topnav" id="myTopnav">
+
+        <!-- Link for the home page -->
+        <a href="Welcome.html">Home</a>
+        
+        <!--When you hover over the Curriculum Vitae, a drop down menu will appear -->
+       <div class="dropdown">
+          <button class="dropbtn" id="active">Curriculum Vitae</button>
+
+          <!-- The drop down content -->
+          <div class="dropdown-content">
+            <a href="CV-PersonalInfo.html">Personal Information</a>
+            <a href="CV-Education.html" class="active">Education</a>
+            <a href="CV-Work.html">Work Experience</a>
+          </div>
+        </div> 
+
+        <!--When you hover over the Interests, a drop down menu will appear -->
+          <div class="dropdown">
+            <button class="dropbtn">Interests</a></button>
+
+             <!-- The drop down content -->
+            <div class="dropdown-content">
+               <a href="Interest-JQ.html">Index</a>
+            </div>
+
+          </div> 
+
+        <div class="dropdown">
+          <button class="dropbtn">Consultancy</button>
+
+           <!-- The drop down content -->
+          <div class="dropdown-content">
+            <a href="IS1113Consult.html">IS1113 Consulting</a>
+          </div>
+        </div> 
+
+        <!-- Calling on javascript when the screen goes below a certain amount of pixels-->
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+
+    <div id="CV">
+        <h3>Education</h3>
+    </div>
+    
+    <div id="CV">
+      <h4>Christian Brothers College (CBC)</h4>
+      <p>I attended CBC from 1st to 4th year.</p>
+      <br>
+      <h4>Deane College</h4>
+      <p>I moved to Deane College after CBC and sat my leaving cert here in 2013.</p>
+      <p>I achieved all high grades.</p>
+      <br>
+      <h4>University College Cork (UCC)</h4>
+      <p>I am currently studying Business Information Systems in UCC.</p>
+      <br>
+
+      <!--Buttons for back to Personal Information or to my work experience-->
+      <a href="CV-PersonalInfo.html"><button>Back to Personal Information</button></a>
+      <a href="CV-Work.html"><button>Continue to Work Experience</button></a>
+    </div>
+  </div>
+
+<!-- the Javascript for my navigation bar -->
+<!-- It changes the ID name so a different css can affect the area depending on the size of the screen -->
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>

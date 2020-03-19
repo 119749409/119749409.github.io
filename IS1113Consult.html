@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About us</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="StylesheetConsultant.css">
+
+		<script type="text/javascript">
+
+ 		function calcSub(){
+ 			var SubTotal = document.querySelector('input[name="ConSer"]:checked');
+
+ 			 if (SubTotal) {
+          var argSelection = SubTotal.value;
+          calcVatTotal(argSelection);
+          
+        } else {
+          alert("Please select a service!");
+        }
+      }
+ 			
+ 	
+ 		 function calcVatTotal(parmSelection) {
+ 		 	var argsubTotal = parmSelection
+ 		 	var argdiscountAmt = parmSelection * .05;
+ 			var argvatAmt = (parmSelection - argdiscountAmt) * .2;
+ 			var argtotalPrice = (parmSelection - argdiscountAmt) + argvatAmt;
+
+ 			clcDisp(argsubTotal, argdiscountAmt, argvatAmt, argtotalPrice);
+ 			delete argsubTotal, argdiscountAmt, argvatAmt, argtotalPrice;
+ 		}
+
+ 		function clcDisp(parmsubTotal, parmdiscountAmt, parmvatAmt, parmtotalPrice){
+ 			if(parmsubTotal, parmdiscountAmt, parmvatAmt, parmtotalPrice){ 
+ 			document.getElementById("SubT").innerHTML = 
+ 			 parmsubTotal;
+ 			document.getElementById("Discount").innerHTML = 
+ 			 parmdiscountAmt;
+ 			document.getElementById("Vat").innerHTML =
+			 parmvatAmt;
+ 			document.getElementById("Total").innerHTML = 
+ 			 parmtotalPrice;
+ 		}
+ 		else {
+ 			
+ 			document.getElementById("SubT").innerHTML = 
+ 			"";
+ 			document.getElementById("Discount").innerHTML = 
+ 			"";
+ 			document.getElementById("Vat").innerHTML =
+			"";
+ 			document.getElementById("Total").innerHTML = 
+ 			"";
+ 		}
+
+ 		
+ 		}
+
+
+		
+	</script>
+</head>
+<body style="background-color:  #dadada ">
+	<div class="Content">
+		<div id="AboutWrapper">
+			<div id="AboutContent">
+		<h4>IS1113 Consulting</h4>
+		<h5>Address: UCC O’Rahilly Building</h5>
+		
+		
+		<em>We provide the lastest consulting offers to the market regarding Hyper-Automation, Multiexperience and Distributed Cloud.</em><br>
+		<em>Please select one of the three options or if you're aware of what these three serives are, go straight to our Price Calculator.</em>
+		<ul>
+			<li><a href='#Hyperautomation'><button>Hyperautomation</button></a></li>
+			<li><a href="#Multiexperience"><button>Multiexperience</button></a></li>
+			<li><a href="#DistributeCloud"><button>Distributed Cloud</button></a></li>
+			<br>
+			<br>
+			<li><a href="#Services"><button>Price Calculator</button></a></li>
+		</ul>
+
+		<br> 
+		<br>
+		<div id="Home">
+		<a href="Welcome.html"><u>Return to home page</u></a>
+	</div>
+	</div>
+	</div>
+	<div id="Information">
+		<div id="Hyperautomation">
+			<img src="Images/HyperAuto.png" style="width: 307px; height: 173px; border-style: outset; float: left; margin-right: 10px">
+			<h3>What is Hyper-Automation?</h3>
+			
+			<p>Hyper-Automation deals with the application of advanced technologies, such as artificial intelligence and machine learning, to increasingly automate processes and augment humans.</p>
+			<p>Hyper-Automation extends across a range of tools that can be automated, but also refers to the sophistication of the automation.</p>
+			<br>
+
+			<h3>Differences between Hyper-automation and regular Automation</h3>
+
+			<p>When we think of automation, terms like robotic process automation come to mind, but hyper-automation takes an ecosystem of technologically advanced tools and combines them to create a new way to work</p>
+			<p>Regular Automation utilzes automation tools, machine learning and advanced artificial intelligence so that outputs can be produced automatically with little to no human intervention.</p>
+			<p>Hyper-Automation, together with humans, can create a workplace that is always informed, agile and able to use data and insights for quick and accurate decision-making</p>
+			<br>
+
+			<h3>Benifits of Hyper-Automation</h3>
+
+			<p>Hyper-automation will allow your workforce to be educated with the latest business and marketplace information so that they can perform their roles optimally.</p>
+			<p>Your workforce will be able to focus on their jobs as they seek to resolve problems and provide creative solutions.</p>
+			<p>Hyper-automation provides your business and its leaders with: </p>
+			<ul>
+				<li>Automated processes</li>
+			    <li>Advanced analytics</li>
+			    <li>Increased employee satisfaction and motivation</li>
+			    <li>An educated workforce </li>
+			    <li>Increased employee capacity</li>
+			    <li>Instant and accurate insights</li>
+			    <li>Greater compliance and reduced risk</li>
+			    <li>Greater productivity</li>
+			    <li>Increased team collaboration</li>
+			</ul>
+			<br>
+
+			<p><u>Link related to Hyperautomation</u>
+				<br>
+			<a href="https://www.solvexia.com/blog/what-is-hyperautomation-a-complete-guide">www.Solvexia.com - What is hyperautomation</a><br>
+			<a href="https://www.pandologic.com/employers/tech-tools/how-hyper-automation-is-changing-the-recruitment-game/">www.pandologic.com - How hyperautomation is changing the recruitment game</a></p>
+		</div>
+	
+		
+			<div id="Multiexperience">
+				<img src="Images/MultiExp.jpg" style="width: 307px; height: 173px; border-style: outset; float: left; margin-right: 10px">
+				<h3>What is Multiexperience?</h3>
+				<p> Multiexperiences serve to centralize life cycle activities, such as designing, developing, testing, distributing, managing and analyzing, for a portfolio of multiexperience apps. Multiexperience refers to the various permutations of modalities (e.g., touch, voice and gesture), devices and apps that users interact with on their digital journey across the various touchpoints. Multiexperience development involves creating fit-for-purpose apps based on touchpoint-specific modalities, while at the same time ensuring a consistent user experience across web, mobile, wearable, conversational and immersive touchpoints.</p>
+				<br>
+
+				<h3>Technology Behind Multiexperience Development</h3>
+				<p>Cloud-hosted  artificial intelligence (AI) services are the most widely used  technology  to support multiexperience application development, followed by native iOS and Android development and mobile back-end services.</p>
+				<em><strong>“This is consistent with the rise of conversational user interfaces, image and voice recognition and other AI services that are becoming commonplace within apps"</em></strong>
+
+				<h3>Benifits of using Multiexperience</h3>
+				<p>Multiexperience development platforms help enterprises to rapidly scale their applications across a range of devices and platforms. Multiexperience can help you develop a single application that can be deployed on a variety of devices.</p>
+				<p>Reasons why enterprises are moving towards Multiexperience</p>
+				<ul>
+					<li>Offer internal operational efficiencies</li>
+					<li>Reduce time to market for mobile apps</li>
+					<li>Better control over actual development</li>
+					<li>Eliminate potential security risks</li>
+				</ul>
+				<br>
+
+			<p><u>Link related to Multiexperience</u>
+				<br>
+			<a href="https://www.signitysolutions.com/blog/multi-experience-development/">www.signitysolutions.com - Multiexperience development</a><br>
+			<a href="https://medium.com/@OPTASY.com/from-mobile-apps-to-multiexperience-apps-4-reasons-to-consider-a-multiexperience-development-4705669cf1b7">www.medium.com - From mobile apps to multiexperience apps</a></p>
+		</div>
+
+		<div id="DistributeCloud">
+			<img src="Images/Cloud.png" style="width: 307px; height: 173px; border-style: outset; float: left; margin-right: 10px">
+			<h3>What is Distributed Cloud?</h3>
+			<p>Distributed cloud is the application of cloud computing technologies to interconnect data and applications served from multiple geographic locations.</p>
+
+			<p>Distributed, in an information technology context, means that something is shared among multiple systems which may also be in different locations. Distributed cloud specificeeds communications for global services and enables more responsive communications for specific regions.</p>
+
+			<br>
+
+			<h3>The 3 main layers of Distributed Cloud</h3>
+			<ul>
+				<li><em><strong>Core cloud:</strong></em> It exists on the top layer of the distributed cloud. It has capabilities of whole works of conventional cloud including management and provision of cloud services and data. </li>
+				<li><em><strong>Regional cloud:</strong></em> It exists on the middle layer of the distributed cloud. It has capabilities of proxy to support high mobility of mobile devices as well as self-deploy cloud service images and data caching.</li>
+				<li><em><strong>Edge cloud:</strong></em> It exists on the bottom layer of the distributed cloud and locates in the proximity of users. It has capabilities of being aware of mobile device, service, location, preferences, and so on, and then deploying and providing real-time cloud services.</li>
+			</ul>
+			<br>
+
+			<h3>Benefits of Distributed Cloud</h3>
+			<ul>
+				<li>Location Transparency</li>
+				<li>High real-time applications</li>
+				<li>High Mobility</li>
+				<li>Load Detachability</li>
+			</ul>
+
+			<br>
+
+			<p><u>Link related to Distributed Cloud</u>
+				<br>
+			<a href="https://www.intechopen.com/books/mobile-computing-technology-and-applications/mobile-services-meet-distributed-cloud-benefits-applications-and-challenges">www.intechopen.com - Mobile services meet distributed cloud</a><br>
+			<a href="https://interestingengineering.com/next-generation-of-cloud-computing-distributed-cloud">www.interestingengineering.com - Next generation of cloud computing, Cloud Computing</a></p>
+		</div>
+
+		<div id="Services">
+			<h2>Price Calculator</h2>
+			<h3>Select a consulting service</h3>
+			<br>
+			<form>
+				<input type="radio" value="200" name="ConSer" id="H">Hyperautomation @ €200<br>
+				<input type="radio" value="500" name="ConSer" id="M">Multiexperience @ €500<br>
+				<input type="radio" value="1000" name="ConSer" id="D">Distributed Cloud @ €1000<br>
+			</form>
+			<button onclick="calcSub()"> Calculate Cost</button>
+			<button onclick="calcVatTotal()">Clear Choice</button>
+			
+			<p><strong>Sub Total: </strong> €<span id="SubT"></span></p>
+			<p><strong>Discount @ 5%: </strong> €<span id="Discount"></span><br>
+			<em>(- Discount)</em></p>
+			<p><strong>Vat @ 20%: </strong> €<span id="Vat"></span></p>
+			<p><strong>Total: </strong> €<span id="Total"></span><br>
+			<em>(- Discount, + VAT)</em></p>
+		</div>
+	</div>
+</body>
+</html>

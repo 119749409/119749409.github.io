@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+  <html>
+
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+    </head>
+
+    <title>Work Experience</title>
+
+    <body style="background-image: url('Images/CV-Back.png'); 
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: sticky;
+                background-attachment: fixed;">
+
+      <div class="Page-Container">
+
+      <!--My Nav Bar -->
+      <div class="topnav" id="myTopnav">
+
+        <!-- Link for the home page -->
+        <a href="Welcome.html">Home</a>
+        
+        <!--When you hover over the Curriculum Vitae, a drop down menu will appear -->
+       <div class="dropdown">
+          <button class="dropbtn" id="active">Curriculum Vitae</button>
+
+          <!-- The drop down content -->
+          <div class="dropdown-content">
+            <a href="CV-PersonalInfo.html">Personal Information</a>
+            <a href="CV-Education.html">Education</a>
+            <a href="CV-Work.html" class="active">Work Experience</a>
+          </div>
+        </div> 
+
+          <div class="dropdown">
+            <button class="dropbtn">Interests</a></button>
+
+             <!-- The drop down content -->
+            <div class="dropdown-content">
+               <a href="Interest-JQ.html">Index</a>
+            </div>
+
+          </div> 
+
+          <!--When you hover over the Interests, a drop down menu will appear -->
+        <div class="dropdown">
+          <button class="dropbtn">Consultancy</button>
+
+           <!-- The drop down content -->
+          <div class="dropdown-content">
+            <a href="IS1113Consult.html">IS1113 Consulting</a>
+          </div>
+        </div> 
+
+        <!-- Calling on javascript when the screen goes below a certain amount of pixels-->
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+
+    <div id="CV" id="Top">
+        <h3>Work Experience</h3>
+    </div>
+    
+
+      <div id="CV"><div id="BWM"></div>
+      <br>
+      <img src="Images/BWM.jpg">
+      <p><strong>Blarney Woolen Mills</strong></p>
+      <p>2014 - 2016</p>
+      <p>This was my first job and it was a great place to start because I was required to learn a diverse set of skills within a demanding industry.</p>
+
+      <br>
+      
+      <ul style="text-align: left;">
+        <p><em><strong><u>Skills I aquired</u></strong></em>
+        <li>Working to defined and strict standard operating procedures</li>
+        <li>Delivering high standard of customer care to Apple Employees </li>
+        <li>Recording of food and refrigeration temperatures </li>
+        <li>Delivering individual customer care and preferences</li>
+        <li>Working under pressure during key busy times </li>
+        <li>Working with peers and superiors in a friendly and effective manner</li>
+      </ul>
+
+      <br />
+      <!--Buttons for back to education or next listed employment-->
+       <a href="CV-Education.html"><button>Back to Education</button></a>
+       <a href="#Apple"><button>Go to next Employment</button></a>
+     </div>
+
+
+   <div id="CV"><div id="Apple"></div> 
+    <br>
+    <img src="Images/Apple.jpg">
+      <p><strong>Apple European Headquaters</strong></p>
+      <p>2016 - 2019</p>
+      <p>I was hired as a Barista and contracted into The Apple European Headquarters. Working as a barista has helped improve the skill’s I learned in my previous job and has taught me how to interact with customers on a more personal level.</p>
+
+      <br>
+
+      <ul style="text-align: left;">
+        <p><em><strong><u>Skills I aquired</u></strong></em>
+        <li>Acquiring and developing Barista skills</li>
+        <li>Beverage service including draft, bottled and wine</li>
+        <li>Experience operating hot and cold food Deli counter</li>
+        <li>Till operation and Cash handling</li>
+        <li>Food service at weddings, functions and banqueting events </li>
+        <li>Developing customer service skills</li>
+      </ul>
+
+      <br />
+
+      <!--Buttons for back to previous employment or next employment-->
+       <a href="#BWM"><button>Back to previous Employment</button></a>
+       <a href="#Clancys"><button>Go to next Employment</button></a>
+    </div>
+
+
+    <div id="CV"><div id="Clancys"></div>    
+      <br>
+      <img src="Images/Clancys.jpg">
+      <p><strong>Clancys Cork</strong></p>
+      <p>2019 - Present</p>
+      <p>I began working at Clancys part-time to help fund myself through college. I was hired as a Bartender/Barista and would work either evenings or morning, depending on where I would be needed that week.</p>
+
+      <br>
+
+      <ul style="text-align: left;">
+        <p><em><strong><u>Skills I aquired</u></strong></em>
+        <li>Improved Bartending skills</li>
+        <li>Beverage service</li>
+        <li>Food service at partys, such as brthdays or staff parties </li>
+      </ul>
+
+      <br>
+
+      <!--Buttons for back to previous employment or to my interest page-->
+       <a href="#Apple"><button>Back to previous Employment</button></a>
+       <a href="Interest-JQ.html"><button>Go to Interest page</button></a>
+      
+    </div>
+  
+
+ 
+  <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv= "Content-Security-Policy" content= "upgrade-insecure-requests">
+    <link rel="stylesheet" type="text/css" href="Stylesheet.css">
+
+  </head>
+  <body style="background-image: url('Images/Back.jpg'); 
+                background-repeat: no-repeat;
+                background-size: cover;">
+
+      <div class="Page-Container">
+
+      <!--My Nav Bar -->
+      <div class="topnav" id="myTopnav">
+
+        <!-- Link for the home page -->
+        <a href="Welcome.html">Home</a>
+        
+        <!--When you hover over the Curriculum Vitae, a drop down menu will appear -->
+       <div class="dropdown">
+          <button class="dropbtn">Curriculum Vitae</button>
+
+          <!-- The drop down content -->
+          <div class="dropdown-content">
+            <a href="CV-PersonalInfo.html">Personal Information</a>
+            <a href="CV-Education.html">Education</a>
+            <a href="CV-Work.html">Work Experience</a>
+          </div>
+        </div> 
+
+           <!--When you hover over the Interests, a drop down menu will appear -->
+          <div class="dropdown" id="active">
+            <button class="dropbtn" style="color: black;">Interests</button>
+
+             <!-- The drop down content -->
+            <div class="dropdown-content">
+               <a href="Interest-JQ.html" class="active">Index</a>
+            </div>
+
+          </div> 
+
+          <!--When you hover over Conssultancy, a drop down menu will appear -->
+        <div class="dropdown">
+          <button class="dropbtn">Consultancy</button>
+
+           <!-- The drop down content -->
+          <div class="dropdown-content">
+            <a href="IS1113Consult.html">IS1113 Consulting</a>
+          </div>
+        </div> 
+
+        <!-- Calling on javascript when the screen goes below a certain amount of pixels-->
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+
+    <div id="CV" id="Top">
+        <h3>Interests</h3>
+    </div>
+    
+        <div id="scroller" style="width: 75vw; height: 279px; margin: auto; margin-top: 10vh;">
+
+    <div class="innerScrollArea">
+        <ul>
+            <!-- Define photos here -->
+            <li><a href="#Music"><img src="Images/Guitar.jpg" width="350" height="250" /></a></li>
+            <li><a href="#Travel"><img src="Images/Travel.jpg" width="450" height="250" /></a></li>
+            <li><a href="#PA"><img src="Images/Gym.jpg" width="350" height="250" /></a></li>
+              <li><a href="#Music"><img src="Images/Music2.jpg" width="350" height="250" /></a></li>
+            <li><a href="#PA"><img src="Images/running.jpg" width="350" height="250" /></a></li>
+            <li><a href="#Travel"><img src="Images/Travel2.jpg" width="350" height="250" /></a></li>
+           
+        </ul>
+    </div>
+</div>
+
+
+
+    <div id="CV">
+
+              <h4>Interest</h4>
+              
+              <p>Above you will see scrolling images related to my interest, such as travel, music and physical activities.</p>
+              <p>Click on the image to go to the relavant pages or click on the buttons below</p>
+
+
+              
+
+          <a href="#Music"><button>Music</button></a>
+              <a href="#Travel"><button>Travel</button></a>
+              <a href="#PA"><button>Physical Activity</button></a>
+            </div>
+
+            <div id="Music">
+                <h3>Music</h3>
+                <p> I began playing guitar when I was 14 in the Mayfield Community Centre and found a passion for it almost immediately.</p>
+                <p>I found my passion almost immediately when I was 14 and began playing guitar in the Mayfield community centre. </p>
+                <p>Shortly after this I followed this passion through teaching in the centre and preformed regularly in a band. This gave me opportunity to perform in a number of venues such as the Bru Bar and Hostel and the slate rooftop.</p>
+                <p>My experience with music has helped me through many aspects of my life such as; perseverance and dedication to both my hobbies and work life.</p>
+
+          </div>
+
+          <div id="Travel">
+            <h3>Travel</h3>
+             <p>When first came to Ireland, following living in Pakistan from the ages of 3-8, I got to experience the difference in culture, stemming my love for travel.</p> <p>Following this I have travelled to many countries such as Budapest and Amsterdam. One of my favourite experiences with travel is going to America, it allows me to reconnect with my family and enjoy the weather. </p>
+          </div>
+
+          <div id="PA">
+           <h3>Physical Activity</h3>
+          <p>I enjoy engaging in physical activities such as training in the gym, running and swimming.</p> 
+          <p>I take part in different physical challenges such as ‘Tough Mudder 20km’. I enjoy the competition and socialization aspect of the challenges.</p>
+           <p>Physical activity allows me to improve both my mental and physical health and is important to me for my wellbeing. </p>
+         </div>
+
+
+<!-- the javascript for my image scroller-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var scroller = $('#scroller div.innerScrollArea');
+        var scrollerContent = scroller.children('ul');
+        scrollerContent.children().clone().appendTo(scrollerContent);
+        var curX = 0;
+        scrollerContent.children().each(function(){
+            var $this = $(this);
+            $this.css('left', curX);
+            curX += $this.outerWidth(true);
+        });
+        var fullW = curX / 2;
+        var viewportW = scroller.width();
+
+        // Scrolling speed management
+        var controller = {curSpeed:0, fullSpeed:1.8};
+        var $controller = $(controller);
+        var tweenToNewSpeed = function(newSpeed, duration)
+        {
+            if (duration === undefined)
+                duration = 600;
+            $controller.stop(true).animate({curSpeed:newSpeed}, duration);
+        };
+
+        // Pause on hover
+        scroller.hover(function(){
+            tweenToNewSpeed(0);
+        }, function(){
+            tweenToNewSpeed(controller.fullSpeed);
+        });
+
+        // Scrolling management; start the automatical scrolling
+        var doScroll = function()
+        {
+            var curX = scroller.scrollLeft();
+            var newX = curX + controller.curSpeed;
+            if (newX > fullW*2 - viewportW)
+                newX -= fullW;
+            scroller.scrollLeft(newX);
+        };
+        setInterval(doScroll, 20);
+        tweenToNewSpeed(controller.fullSpeed);
+    });
+</script>
+
+
+  <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</body>
+</html>
